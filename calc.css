@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.calculator {
+  width: 280px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+input#discalc {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 24px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #f1f1f1;
+  text-align: right;
+  transition: all 0.2s ease;
+}
+
+input#discalc:focus {
+  outline: 2px solid #4a4a4a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 18px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 6px #b8b8b8, -3px -3px 6px #ffffff;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  transform: scale(1.05);
+}
+
+button:active {
+  background: linear-gradient(145deg, #b8b8b8, #d8d8d8);
+  box-shadow: inset 3px 3px 6px #b8b8b8;
+  transform: scale(0.95);
+}
+
+button.operator {
+  background: linear-gradient(145deg, #ff9a00, #ff6a00);
+  color: white;
+}
+
+button.operator:hover {
+  background: linear-gradient(145deg, #ff6a00, #ff9a00);
+}
+
+button.clear {
+  background: linear-gradient(145deg, #ff4444, #ff1a1a);
+  color: white;
+}
+
+button.clear:hover {
+  background: linear-gradient(145deg, #ff1a1a, #ff4444);
+}
